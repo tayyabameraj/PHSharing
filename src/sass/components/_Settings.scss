@@ -1,0 +1,17 @@
+// Edit Profile
+.editProfile {
+  margin-top: 30px;
+  max-width: 100%;
+  @include min768 {
+    max-width: 600px;
+  }
+}
+
+.formSave {
+  box-shadow: 10px 10px 10px 10px gray;
+}
+
+#changeImage {
+  visibility: hidden;
+  position: absolute;
+}

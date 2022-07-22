@@ -1,0 +1,131 @@
+@import "bootstrap";
+@import "gestalt";
+@import "mixins";
+@import "variables";
+
+// Global
+@import "global";
+
+// @Navbar
+#WPC_Navbar {
+  @import "./components/Navbar";
+}
+.slick-dots {
+  bottom: inherit !important;
+  top: 10%;
+}
+// @Posts
+#Posts {
+  @import "./components/Post";
+}
+
+// @Settings
+#Settings {
+  @import "./components/Settings";
+}
+
+// @Event Card
+.eventCard {
+  @import "./components/EventCard";
+}
+// Home
+#Home {
+  .calcHeight {
+    position: relative;
+    min-height: 50vh;
+    display: none;
+    @include min992 {
+      // height: calc(100vh - 78px);
+      height: 70vh;
+      display: block;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 5vh;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background: rgba(255, 254, 254, 0.4);
+      box-shadow: -2px -20px 20px 20px rgba(255, 254, 254, 0.4);
+    }
+  }
+  .MainHeading {
+    display: none;
+    @include min992 {
+      display: block;
+    }
+    h1 {
+      font-size: 60px;
+    }
+  }
+  .slick-list,
+  .calcHeight div {
+    height: 100% !important;
+  }
+  .h-100vh {
+    height: 100vh;
+  }
+  .bottomWindow {
+    position: relative;
+    @include min992 {
+      height: 100vh;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 5vh;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(255, 254, 254, 0.4);
+      box-shadow: 1px 20px 20px 20px rgba(255, 254, 254, 0.4);
+    }
+    .row {
+      padding: 100px 20px;
+      @include min992 {
+        max-width: 65%;
+      }
+      margin: 0 auto !important;
+      align-items: center;
+      .signupCaption {
+        text-align: center;
+        font-size: 35px;
+        @include min992 {
+          font-size: 75px;
+        }
+
+        font-weight: bold;
+        color: #fff;
+        margin: 0;
+      }
+      .registerForm {
+        background: #fff;
+        padding: 20px 10px;
+        border-radius: 20px;
+        div {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.secondary-text {
+  color: blue;
+}
+
+// Login Modal
+.loginModal {
+  .OVX {
+    border-radius: 10px !important;
+  }
+}

@@ -1,0 +1,23 @@
+// Navbar
+.navbarLg {
+  display: none;
+  @include min992 {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+.clNavbar,
+.responsiveSearchField,
+.searchFieldButton {
+  display: block;
+  @include min992 {
+    display: none;
+  }
+}
+.searchField {
+  width: 100%;
+  display: none;
+  @include min992 {
+    display: block;
+  }
+}

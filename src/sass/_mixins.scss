@@ -1,0 +1,12 @@
+// @mixins
+
+@mixin min768 {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin min992 {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
